@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Nice Weather App</title>
   </head>
   <body>
@@ -19,10 +19,10 @@
         <div class="row">
           <div class="col-6">
             <img src="media/cloudy.png" alt="Clouds" width="50 px" />
-            6°C | F
+            <strong class="current-temperature"> 6°C | F </strong>
           </div>
           <div class="col-6">
-            <h1>Kyiv</h1>
+            <h1 class="city">Kyiv</h1>
             <ul>
               <li>Thursday</li>
               <li>13:45</li>
@@ -30,15 +30,15 @@
           </div>
           <ul>
             <li>
-              <img src="media/drop.png" alt="Precipitation" width="20 px" />
+              <img src="media/drop.png" alt="Precipitation" width="15 px" />
               Precipitation: 30%
             </li>
             <li>
-              <img src="media/humidity.png" alt="Humidity" width="20 px" />
+              <img src="media/humidity.png" alt="Humidity" width="15 px" />
               Humidity: 30%
             </li>
             <li>
-              <img src="media/wind.png" alt="Wind" width="20 px" />
+              <img src="media/wind.png" alt="Wind" width="15 px" />
               Wind: 5 km/h
             </li>
           </ul>
