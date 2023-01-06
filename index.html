@@ -15,41 +15,37 @@
   </head>
   <body>
     <div class="container">
-      <div class="nice-weather">
-        <div class="row">
-          <div class="col-6">
-            <img src="media/cloudy.png" alt="Clouds" width="50 px" />
-            <strong class="current-temperature"> 6°C | F </strong>
-          </div>
-          <div class="col-6">
-            <h1 class="city">Kyiv</h1>
+      <div class="app-wrapper">
+        <div class="nice-weather">
+          <div class="row">
+            <div class="col-6 overview">
+              <div class="d-flex current-temperature">
+                <img src="media/cloudy.png" alt="Clouds" id="icon" />
+                <strong id="temperature">6</strong
+                ><span class="units">°C | <a href="#">F</a></span>
+              </div>
+            </div>
+            <div class="col-6 overview">
+              <h1 class="city">Kyiv</h1>
+              <ul>
+                <li>Thursday</li>
+                <li>13:45</li>
+              </ul>
+            </div>
             <ul>
-              <li>Thursday</li>
-              <li>13:45</li>
+              <li>Precipitation: 30%</li>
+              <li>Humidity: 30%</li>
+              <li>Wind: 5 km/h</li>
             </ul>
           </div>
-          <ul>
-            <li>
-              <img src="media/drop.png" alt="Precipitation" width="15 px" />
-              Precipitation: 30%
-            </li>
-            <li>
-              <img src="media/humidity.png" alt="Humidity" width="15 px" />
-              Humidity: 30%
-            </li>
-            <li>
-              <img src="media/wind.png" alt="Wind" width="15 px" />
-              Wind: 5 km/h
-            </li>
-          </ul>
         </div>
+        <small>
+          <a href="https://github.com/yokoole/Nice-weather-app" target="_blank"
+            >Open-source code</a
+          >
+          by Olha Dehtiarova
+        </small>
       </div>
-      <small>
-        <a href="https://github.com/yokoole/Nice-weather-app" target="_blank"
-          >Open-source code</a
-        >
-        by Olha Dehtiarova
-      </small>
     </div>
     <script src="src/app.js"></script>
   </body>

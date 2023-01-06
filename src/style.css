@@ -1,10 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: #555555;
 }
 
 h1 {
   color: #555555;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
@@ -18,21 +19,42 @@ ul {
 li {
   color: #92a13a;
   list-style: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 100;
   line-height: 19px;
   margin: 0;
   padding: 0;
 }
 
-.nice-weather {
+.app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.nice-weather {
   padding: 20px;
   border: 1px solid #b4b15f;
   border-radius: 5px;
 }
 
-.current-temperature {
+.overview {
+  margin-bottom: 30px;
+}
+
+.current-temperature img {
+  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+}
+
+.current-temperature strong {
   color: #555555;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.current-temperature .units {
+  position: relative;
+  font-size: 16px;
 }
