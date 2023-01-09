@@ -18,6 +18,22 @@
     <div class="container">
       <div class="app-wrapper">
         <div class="nice-weather">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="City name"
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="Search" class="form-control" />
+              </div>
+            </div>
+          </form>
           <div class="row">
             <div class="col-6 overview">
               <div class="d-flex current-temperature">
