@@ -15,6 +15,27 @@ function formatDate(time) {
     return `${day}, ${currentDate}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+    let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+    days.forEach(function(day) {
+      forecastHTML = forecastHTML + `
+      <div class="col-2">
+        <div class="wf-date">${day}</div>
+        image
+        <div class="wf-temperature">
+          <span class="wf-temperature-max">-1°</span>
+          <span class="wf-temperature-min">-4°</span>
+        </div>
+      </div>`;
+    })
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(responce) {
     let temperatureElement = document.querySelector("#temperature");
     let cityElement = document.querySelector("#city");
@@ -48,6 +69,7 @@ function submittedCity(event) {
 } 
 
 search("Kyiv");
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submittedCity)
