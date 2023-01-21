@@ -15,8 +15,9 @@ function formatDate(time) {
     return `${day}, ${currentDate}, ${hours}:${minutes}`;
 }
 
-function displayForecast() {
-    let forecastElement = document.querySelector("#forecast");
+function displayForecast(responce) {
+  console.log(responce.data.daily);
+    let forecastElement = document.querySelector("#forecast"); 
 
     let forecastHTML = `<div class="row">`;
     let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -34,6 +35,12 @@ function displayForecast() {
 
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "f60o31cb1at3bc83d7c4d07b447cfe84";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(responce) {
@@ -54,7 +61,9 @@ function displayTemperature(responce) {
     dateElement.innerHTML = formatDate(responce.data.time * 1000);
     iconElement.setAttribute("src", `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${responce.data.condition.icon}.png`);
     iconElement.setAttribute("alt", responce.data.condition.description);
-}
+
+    getForecast(responce.data.coordinates);
+  }
 
 function search(city) {
 let apiKey = "f60o31cb1at3bc83d7c4d07b447cfe84";
@@ -69,7 +78,6 @@ function submittedCity(event) {
 } 
 
 search("Kyiv");
-displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submittedCity)
