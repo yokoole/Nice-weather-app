@@ -92,3 +92,7 @@ li:first-letter {
 .wf-temperature-min {
   opacity: 0.6;
 }
+
+#forecast-icon {
+  max-width: 50px;
+}
