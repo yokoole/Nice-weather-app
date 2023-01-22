@@ -1,10 +1,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #555555;
+  background-color: #ca924c;
 }
 
 form {
   margin-bottom: 30px;
+}
+
+hr {
+  opacity: 0.1;
 }
 
 h1 {
@@ -13,6 +18,7 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
+  margin-top: 4px;
 }
 
 h2 {
@@ -42,15 +48,29 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+a {
+  color: #fafafb;
+}
+
 .app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
 
 .nice-weather {
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #ca924c;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fafafb;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  color: #555555;
+  border-color: #c3b36d;
+  background-color: #fafafb;
+  box-shadow: 0 2px 8px 0 #cdcdcd;
 }
 
 .overview {
