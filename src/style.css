@@ -68,7 +68,7 @@ a {
 
 .form-control {
   color: #555555;
-  border-color: #c3b36d;
+  border-color: #ca924c;
   background-color: #fafafb;
   box-shadow: 0 2px 8px 0 #cdcdcd;
 }
@@ -115,4 +115,15 @@ a {
 
 #forecast-icon {
   max-width: 50px;
+}
+
+#button {
+  background-color: #ca924c;
+  color: #fafafb;
+}
+
+#button:hover {
+  background-color: #fafafb;
+  color: #ca924c;
+  transition-duration: 0.4s;
 }
